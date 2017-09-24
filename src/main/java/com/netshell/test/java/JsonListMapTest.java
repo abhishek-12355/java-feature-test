@@ -1,7 +1,10 @@
 package com.netshell.test.java;
 
+import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
@@ -47,7 +50,7 @@ public class JsonListMapTest implements Test {
                 "            \"value\": \"false\"\n" +
                 "        }]";
 
-        List<Map<String, String>> list = mapper.readValue(request, List.class);
+        List<Map<String, String>> list = mapper.readValue(request, new TypeReference<LinkedList<HashMap<String, String>>>(){});
         System.out.println(list);
     }
 }
