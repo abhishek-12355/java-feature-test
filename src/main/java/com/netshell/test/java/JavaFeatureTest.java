@@ -1,7 +1,6 @@
 package com.netshell.test.java;
 
-import com.netshell.test.java.dependency.DependencyGraphTest;
-import com.netshell.test.java.dependency.DependencyResolutionTest;
+import com.netshell.test.java.jmustache.JMustacheCollectionSizeTest;
 
 /**
  * Created by ASHEKHA
@@ -10,7 +9,7 @@ import com.netshell.test.java.dependency.DependencyResolutionTest;
 public class JavaFeatureTest {
 
     public static void main(String[] args) throws Exception {
-        Test test = new JsonListMapTest();
+        Test test = new JMustacheCollectionSizeTest();
         test.execute();
     }
 }
